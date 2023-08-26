@@ -2,23 +2,21 @@
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
-const User = require("../Models/UserModel");
-
+const Transaction = require("../Models/TransactionModel");
 dotenv.config();
 
-const CreateUser = async (req, res) => {
+const CreateTransaction = async (req, res) => {
   console.log(req.body);
-  const { Address, Balance } = req.body;
+  const { TransactionHash } = req.body;
 
-  const user = new User({
+  const transaction = new Transaction({
     _id: new mongoose.Types.ObjectId(),
-    Address: Address,
-    Balance: Balance,
+    TransactionHash: TransactionHash,
   });
 
-  return user
+  return transaction
     .save()
-    .then((user) => res.status(201).json({ user }))
+    .then((transaction) => res.status(201).json({ transaction }))
     .catch((error) => {
       console.log(error);
       res.status(400).json({ error });
@@ -26,9 +24,9 @@ const CreateUser = async (req, res) => {
 };
 
 const readAll = (req, res) => {
-  User.find()
+  Transaction.find()
     .exec()
-    .then((User) => res.status(200).json({ User }))
+    .then((Transactions) => res.status(200).json({ Transactions }))
     .catch((error) => {
       console.log(error);
       res.status(400).json({ error });
@@ -37,9 +35,9 @@ const readAll = (req, res) => {
 
 const readById = (req, res, next) => {
   console.log("Id", req.params.id);
-  User.findById(req.params.id)
+  Transaction.findById(req.params.id)
     .exec()
-    .then((user) => res.status(200).json({ user }))
+    .then((transaction) => res.status(200).json({ transaction }))
     .catch((error) => {
       console.log(error);
       res.status(400).json({ error });
@@ -47,7 +45,7 @@ const readById = (req, res, next) => {
 };
 
 module.exports = {
-  CreateUser,
+  CreateTransaction,
   readAll,
   readById,
 };

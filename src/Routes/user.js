@@ -4,13 +4,9 @@ const router = express.Router();
 const verifyJwt = require("../Middleware/verifyJWT");
 
 router.post("/addUser", controller.CreateUser);
-router.post("/login", controller.login);
-router.get("/readAll", verifyJwt, controller.readAll);
-router.get("/readUser/:id", verifyJwt, controller.readById);
-router.put("/updateUser/:id", verifyJwt, controller.update);
-router.delete("/deleteUser/:id", verifyJwt, controller.remove);
-router.patch("/patch/:id", verifyJwt, controller.patching);
+router.get("/", controller.readAll);
+router.get("/allusers/:id", controller.readById);
 
-router.get("/post/:id", verifyJwt, controller.getalluserpost);
+// router.post("/setavatar/:id", setAvatar);
 
 module.exports = router;
