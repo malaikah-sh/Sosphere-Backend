@@ -20,5 +20,3 @@ app.use("/Transaction", TransactionRoutes);
 app.use("/User", UserRoutes);
 app.use("/msg", MsgRoutes);
 app.use("/api", dexApiRoutes);
-
-export default app;
