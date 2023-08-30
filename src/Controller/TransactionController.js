@@ -1,8 +1,9 @@
-// const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const Transaction = require("../Models/TransactionModel");
+// const bcrypt = require("bcrypt");
+
 dotenv.config();
 
 const CreateTransaction = async (req, res) => {

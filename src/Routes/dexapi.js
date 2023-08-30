@@ -1,5 +1,5 @@
 const express = require("express");
-const controller = require("../Controller/DexApiController");
+const controller = require("../Controller/DexApiController.js");
 const router = express.Router();
 /// Make it Only access if he holds the token
 

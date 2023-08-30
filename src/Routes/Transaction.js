@@ -1,5 +1,5 @@
 const express = require("express");
-const controller = require("../controller/TransactionController");
+const controller = require("../controller/TransactionController.js");
 const router = express.Router();
 const verifyJwt = require("../Middleware/verifyJWT");
 

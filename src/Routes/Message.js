@@ -1,5 +1,5 @@
 const express = require("express");
-const controller = require("../Controller/MessageController");
+const controller = require("../Controller/MessageController.js");
 const router = express.Router();
 const verifyJwt = require("../Middleware/verifyJWT");
 /// Only access if he holds the token
