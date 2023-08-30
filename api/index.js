@@ -16,7 +16,6 @@ app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.listen(process.env.PORT, () => {
   console.log(`Server Running on port ${process.env.PORT}`);
 });
-app.use("/Transaction", TransactionRoutes);
 app.use("/User", UserRoutes);
 app.use("/msg", MsgRoutes);
 app.use("/api", dexApiRoutes);
