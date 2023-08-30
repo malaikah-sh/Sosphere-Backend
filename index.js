@@ -4,7 +4,7 @@ const swaggerDocument = require("./swagger.json");
 const express = require("express");
 require("dotenv").config();
 require("./mongo");
-const TransactionRoutes = require("/var/task/src/Routes/Transaction");
+const TransactionRoutes = require("./src/Routes/Transaction");
 const UserRoutes = require("./src/Routes/User");
 const MsgRoutes = require("./src/Routes/Message");
 const dexApiRoutes = require("./src/Routes/dexapi");
