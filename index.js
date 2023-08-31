@@ -1,5 +1,5 @@
 const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("../swagger.json");
+const swaggerDocument = require("./swagger.json");
 
 const express = require("express");
 require("dotenv").config();
@@ -13,6 +13,6 @@ app.use(express.json());
 app.listen(process.env.PORT, () => {
   console.log(`Server Running on port ${process.env.PORT}`);
 });
-// app.use("/User", UserRoutes);
-// app.use("/msg", MsgRoutes);
+app.use("/User", UserRoutes);
+app.use("/msg", MsgRoutes);
 app.use("/api", dexApiRoutes);
