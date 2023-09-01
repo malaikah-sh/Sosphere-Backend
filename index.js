@@ -1,6 +1,7 @@
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger.json");
-
+// "use strict";
+// const util = require('util');
+// global.TextEncoder = util.TextEncoder;
+// global.TextDecoder = util.TextDecoder;
 const express = require("express");
 require("dotenv").config();
 require("./mongo");
