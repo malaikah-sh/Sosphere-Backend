@@ -3,6 +3,7 @@
 // global.TextEncoder = util.TextEncoder;
 // global.TextDecoder = util.TextDecoder;
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 require("./mongo");
 const UserRoutes = require("./src/Routes/User");
@@ -10,7 +11,7 @@ const MsgRoutes = require("./src/Routes/Message");
 const dexApiRoutes = require("./src/Routes/dexapi");
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 app.listen(process.env.PORT, () => {
   console.log(`Server Running on port ${process.env.PORT}`);
 });
