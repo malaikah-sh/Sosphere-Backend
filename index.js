@@ -9,6 +9,7 @@ require("./mongo");
 const UserRoutes = require("./src/Routes/User");
 const MsgRoutes = require("./src/Routes/Message");
 const dexApiRoutes = require("./src/Routes/dexapi");
+const searchRoutes = require("./src/Routes/search");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -18,3 +19,4 @@ app.listen(process.env.PORT, () => {
 app.use("/User", UserRoutes);
 app.use("/msg", MsgRoutes);
 app.use("/api", dexApiRoutes);
+app.use("/search", searchRoutes);
