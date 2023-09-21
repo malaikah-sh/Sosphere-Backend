@@ -13,11 +13,11 @@ const searchResult = new mongoose.Schema({
     required: true,
   },
   Score: {
-    type: String,
+    type: Number,
     required: true,
   },
   Released: {
-    type: String,
+    type: Number,
     required: true,
   },
   Repeat: {
