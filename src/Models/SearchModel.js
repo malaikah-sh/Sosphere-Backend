@@ -27,7 +27,7 @@ const searchResult = new mongoose.Schema({
   },
   Symbol: {
     type: String,
-    required: false,
+    required: true,
   },
 });
 
