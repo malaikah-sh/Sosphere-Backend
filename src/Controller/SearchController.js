@@ -8,7 +8,7 @@ dotenv.config();
 
 const CreateResult = async (req, res) => {
   console.log(req.body);
-  const { Address, Tokenomics, Audit, Score, Released } = req.body;
+  const { Address, Tokenomics, Audit, Score, Released, Symbol } = req.body;
 
   // Check if an entry with the same address already exists
   SearchResult.findOne({ Address })
@@ -26,6 +26,7 @@ const CreateResult = async (req, res) => {
           Audit: Audit,
           Score: Score,
           Released: Released,
+          Symbol: Symbol,
           Repeat: 1, // Initialize 'repeat' to 1 for a new entry
         });
         return searchResult.save();

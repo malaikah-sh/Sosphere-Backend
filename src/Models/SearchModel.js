@@ -25,6 +25,10 @@ const searchResult = new mongoose.Schema({
     required: true,
     default: 0,
   },
+  Symbol: {
+    type: String,
+    required: false,
+  },
 });
 
 module.exports = mongoose.model("SearchResult", searchResult);
