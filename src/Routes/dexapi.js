@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.get("/token", controller.getToken);
 router.get("/pair", controller.getPair);
+router.get("/webtoadd", controller.getaddress);
 
 module.exports = router;
