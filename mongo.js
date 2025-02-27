@@ -1,5 +1,9 @@
-const moongoes = require("mongoose");
-moongoes
+const mongoose = require("mongoose");
+
+// Fix the Mongoose warning
+mongoose.set("strictQuery", false);
+
+mongoose
   .connect(process.env.DB_Connection, {
     keepAlive: true,
     useNewUrlParser: true,
@@ -11,7 +15,7 @@ moongoes
     );
   })
   .catch((err) => {
-    console.error("Error connecting to mongo", err);
+    console.error("Error connecting to Mongo", err);
   });
 
-module.exports = moongoes;
+module.exports = mongoose;
