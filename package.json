@@ -1,12 +1,13 @@
 {
-  "name": "nodeapi",
+  "name": "sosphere-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for Sosphere Disaster Management App",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "Malaikah",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
@@ -21,11 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jibran181/DexAI-Backend.git"
+    "url": "git+https://github.com/malaikah-sh/Sosphere-Backend.git"
   },
-  "keywords": [],
+  "keywords": ["disaster-management", "backend", "sosphere"],
   "bugs": {
-    "url": "https://github.com/Jibran181/DexAI-Backend/issues"
+    "url": "https://github.com/malaikah-sh/Sosphere-Backend/issues"
   },
-  "homepage": "https://github.com/Jibran181/DexAI-Backend#readme"
+  "homepage": "https://github.com/malaikah-sh/Sosphere-Backend#readme"
 }
